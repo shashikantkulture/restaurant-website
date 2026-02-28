@@ -10,7 +10,17 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* About */}
           <div>
-            <h3 className="text-2xl font-serif font-bold mb-4">Royal Kitchen</h3>
+            <Link href="/" className="inline-flex flex-col items-center justify-center transform hover:scale-105 transition-transform duration-300 mb-4">
+              <div className="text-4xl md:text-5xl font-black tracking-tighter drop-shadow-md leading-none">
+                <span className="text-[#FCD34D]">WA</span>
+                <span className="text-[#4ADE80]">AH!</span>
+              </div>
+              <div className="bg-white px-2 py-0.5 mt-1 rounded-sm shadow-md">
+                <span className="text-[10px] md:text-[11px] font-extrabold text-[#E11D48] tracking-widest whitespace-nowrap uppercase">
+                  #kya_swaad_hai
+                </span>
+              </div>
+            </Link>
             <p className="text-cream-200 mb-4">
               Serving authentic Indian cuisine with love and tradition since 1995.
             </p>
@@ -89,7 +99,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-maroon-800 mt-8 pt-8 text-center text-cream-200">
-          <p>&copy; {new Date().getFullYear()} Royal Kitchen. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} WAAH! All rights reserved.</p>
         </div>
       </div>
     </footer>
