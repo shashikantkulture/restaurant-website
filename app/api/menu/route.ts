@@ -2,12 +2,14 @@ import { NextResponse } from 'next/server';
 import clientPromise from '@/lib/mongodb';
 import { MenuItem } from '@/lib/models/Menu';
 
+export const dynamic = 'force-dynamic';
+
 export async function GET() {
   try {
     const client = await clientPromise;
     const db = client.db('restaurant');
     const menu = await db.collection<MenuItem>('menu').find({}).toArray();
-    
+
     return NextResponse.json(menu);
   } catch (error) {
     console.error('Error fetching menu:', error);
@@ -32,7 +34,7 @@ export async function POST(request: Request) {
 
     const client = await clientPromise;
     const db = client.db('restaurant');
-    
+
     const menuItem: MenuItem = {
       name,
       description,
@@ -45,10 +47,10 @@ export async function POST(request: Request) {
     };
 
     const result = await db.collection<MenuItem>('menu').insertOne(menuItem);
-    
-    return NextResponse.json({ 
-      success: true, 
-      id: result.insertedId 
+
+    return NextResponse.json({
+      success: true,
+      id: result.insertedId
     }, { status: 201 });
   } catch (error) {
     console.error('Error creating menu item:', error);
