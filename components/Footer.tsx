@@ -70,19 +70,19 @@ export default function Footer() {
             <ul className="space-y-3">
               <li className="flex items-center gap-2 text-cream-200">
                 <Phone className="w-5 h-5" />
-                <a href="tel:+911234567890" className="hover:text-gold-400 transition-colors">
-                  +91 123 456 7890
+                <a href="tel:08601400101" className="hover:text-gold-400 transition-colors">
+                  086014 00101
                 </a>
               </li>
               <li className="flex items-center gap-2 text-cream-200">
                 <Mail className="w-5 h-5" />
-                <a href="mailto:info@royalkitchen.com" className="hover:text-gold-400 transition-colors">
-                  info@royalkitchen.com
+                <a href="mailto:waahkyaswaadhailko@gmail.com" className="hover:text-gold-400 transition-colors">
+                  waahkyaswaadhailko@gmail.com
                 </a>
               </li>
               <li className="flex items-start gap-2 text-cream-200">
                 <MapPin className="w-5 h-5 mt-1" />
-                <span>123 Main Street, City, State 12345</span>
+                <span className="text-sm">Lucknow-Hardoi-Shahjahanpur Rd, opp. Charak Hospital, Sarfarazganj, Lucknow, Uttar Pradesh 226003</span>
               </li>
             </ul>
           </div>

@@ -40,7 +40,7 @@ export default function ContactPage() {
       <section className="relative h-96 flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-r from-maroon-900/90 to-maroon-800/80 z-10"></div>
-          <div 
+          <div
             className="w-full h-full bg-cover bg-center"
             style={{
               backgroundImage: "url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1920')",
@@ -144,7 +144,7 @@ export default function ContactPage() {
               viewport={{ once: true }}
             >
               <h2 className="text-3xl font-serif font-bold text-maroon-800 mb-6">Get in Touch</h2>
-              
+
               <div className="space-y-6 mb-8">
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 bg-maroon-100 rounded-full flex items-center justify-center flex-shrink-0">
@@ -152,8 +152,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Phone</h3>
-                    <a href="tel:+911234567890" className="text-gray-600 hover:text-maroon-600">
-                      +91 123 456 7890
+                    <a href="tel:08601400101" className="text-gray-600 hover:text-maroon-600">
+                      086014 00101
                     </a>
                   </div>
                 </div>
@@ -164,8 +164,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
-                    <a href="mailto:info@royalkitchen.com" className="text-gray-600 hover:text-maroon-600">
-                      info@royalkitchen.com
+                    <a href="mailto:waahkyaswaadhailko@gmail.com" className="text-gray-600 hover:text-maroon-600">
+                      waahkyaswaadhailko@gmail.com
                     </a>
                   </div>
                 </div>
@@ -177,9 +177,9 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Address</h3>
                     <p className="text-gray-600">
-                      123 Main Street<br />
-                      City, State 12345<br />
-                      India
+                      Lucknow-Hardoi-Shahjahanpur Rd, opp. Charak Hospital,<br />
+                      Sarfarazganj, Lucknow,<br />
+                      Uttar Pradesh 226003
                     </p>
                   </div>
                 </div>
@@ -187,7 +187,7 @@ export default function ContactPage() {
 
               {/* WhatsApp Button */}
               <a
-                href="https://wa.me/911234567890"
+                href="https://wa.me/918601400101"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors"

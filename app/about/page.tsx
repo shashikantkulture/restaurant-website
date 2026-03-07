@@ -11,7 +11,7 @@ export default function AboutPage() {
       <section className="relative h-96 flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-r from-maroon-900/90 to-maroon-800/80 z-10"></div>
-          <div 
+          <div
             className="w-full h-full bg-cover bg-center"
             style={{
               backgroundImage: "url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1920')",
@@ -34,21 +34,21 @@ export default function AboutPage() {
               viewport={{ once: true }}
               className="prose prose-lg max-w-none"
             >
-              <h2 className="text-4xl font-serif font-bold text-maroon-800 mb-6">Welcome to Royal Kitchen</h2>
+              <h2 className="text-4xl font-serif font-bold text-maroon-800 mb-6">Welcome to Waah Kya Swaad Hai</h2>
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                For over three decades, Royal Kitchen has been a beacon of authentic Indian cuisine, 
-                bringing the rich flavors and traditions of India to food lovers around the world. 
-                Our journey began in 1995 when our founder, a passionate chef with a vision, 
+                For over three decades, Waah Kya Swaad Hai has been a beacon of authentic Indian cuisine,
+                bringing the rich flavors and traditions of India to food lovers around the world.
+                Our journey began in 1995 when our founder, a passionate chef with a vision,
                 decided to share the culinary heritage passed down through generations.
               </p>
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                Every dish we serve tells a story—a story of family recipes, traditional cooking methods, 
-                and the love for creating memorable dining experiences. We source the finest ingredients, 
-                use authentic spices, and prepare each meal with the same care and attention that has 
+                Every dish we serve tells a story—a story of family recipes, traditional cooking methods,
+                and the love for creating memorable dining experiences. We source the finest ingredients,
+                use authentic spices, and prepare each meal with the same care and attention that has
                 defined our kitchen for years.
               </p>
               <p className="text-lg text-gray-700 leading-relaxed">
-                Today, we continue to honor our traditions while embracing innovation, ensuring that 
+                Today, we continue to honor our traditions while embracing innovation, ensuring that
                 every guest experiences the perfect blend of heritage and modernity in every bite.
               </p>
             </motion.div>

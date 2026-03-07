@@ -37,7 +37,7 @@ export default function CheckoutPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!formData.name || !formData.phone || !formData.address) {
       toast.error('Please fill in all fields');
       return;
@@ -78,7 +78,7 @@ export default function CheckoutPage() {
         key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID,
         amount: Math.round(getTotal() * 100), // Amount in paise
         currency: 'INR',
-        name: 'Royal Kitchen',
+        name: 'Waah Kya Swaad Hai',
         description: 'Order Payment',
         order_id: data.razorpayOrderId,
         handler: async function (response: any) {
@@ -143,7 +143,7 @@ export default function CheckoutPage() {
             <div className="lg:col-span-2">
               <form onSubmit={handleSubmit} className="bg-white rounded-lg shadow-md p-6">
                 <h2 className="text-2xl font-bold text-gray-900 mb-6">Customer Details</h2>
-                
+
                 <div className="space-y-4">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
@@ -208,7 +208,7 @@ export default function CheckoutPage() {
             <div className="lg:col-span-1">
               <div className="bg-white rounded-lg shadow-md p-6 sticky top-24">
                 <h2 className="text-2xl font-bold text-gray-900 mb-6">Order Summary</h2>
-                
+
                 <div className="space-y-3 mb-6">
                   {items.map((item) => (
                     <div key={item.menuItemId} className="flex justify-between text-sm">
