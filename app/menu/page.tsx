@@ -98,11 +98,10 @@ export default function MenuPage() {
               <button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
-                className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${
-                  selectedCategory === category
+                className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${selectedCategory === category
                     ? 'bg-maroon-600 text-white shadow-lg'
                     : 'bg-cream-100 text-gray-700 hover:bg-cream-200'
-                }`}
+                  }`}
               >
                 {category}
               </button>
@@ -133,6 +132,9 @@ export default function MenuPage() {
                       src={item.image || 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800'}
                       alt={item.name}
                       className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                      onError={(e) => {
+                        (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800';
+                      }}
                     />
                     {!item.available && (
                       <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
@@ -149,11 +151,10 @@ export default function MenuPage() {
                     <button
                       onClick={() => handleAddToCart(item)}
                       disabled={!item.available}
-                      className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2 ${
-                        item.available
+                      className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2 ${item.available
                           ? 'bg-maroon-600 hover:bg-maroon-700 text-white'
                           : 'bg-gray-300 text-gray-500 cursor-not-allowed'
-                      }`}
+                        }`}
                     >
                       <Plus className="w-5 h-5" />
                       Add to Cart

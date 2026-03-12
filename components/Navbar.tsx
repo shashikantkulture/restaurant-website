@@ -10,6 +10,7 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
+  const isHomePage = pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,6 +19,9 @@ export default function Navbar() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // On home page: transparent until scrolled. On all other pages: always solid white.
+  const isTransparent = isHomePage && !isScrolled;
 
   const navLinks = [
     { href: '/', label: 'Home' },
@@ -28,7 +32,7 @@ export default function Navbar() {
 
   return (
     <motion.nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-lg' : 'bg-transparent'
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isTransparent ? 'bg-transparent' : 'bg-white shadow-lg'
         }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
@@ -56,12 +60,12 @@ export default function Navbar() {
                 key={link.href}
                 href={link.href}
                 className={`font-medium transition-colors relative ${pathname === link.href
-                    ? isScrolled
-                      ? 'text-maroon-600'
-                      : 'text-gold-400'
-                    : isScrolled
-                      ? 'text-gray-700 hover:text-maroon-600'
-                      : 'text-white hover:text-gold-400'
+                  ? isTransparent
+                    ? 'text-gold-400'
+                    : 'text-maroon-600'
+                  : isTransparent
+                    ? 'text-white hover:text-gold-400'
+                    : 'text-gray-700 hover:text-maroon-600'
                   }`}
               >
                 {link.label}
@@ -82,9 +86,9 @@ export default function Navbar() {
             aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? (
-              <X className={`w-6 h-6 ${isScrolled ? 'text-gray-900' : 'text-white'}`} />
+              <X className={`w-6 h-6 ${isTransparent ? 'text-white' : 'text-gray-900'}`} />
             ) : (
-              <Menu className={`w-6 h-6 ${isScrolled ? 'text-gray-900' : 'text-white'}`} />
+              <Menu className={`w-6 h-6 ${isTransparent ? 'text-white' : 'text-gray-900'}`} />
             )}
           </button>
         </div>
@@ -105,8 +109,8 @@ export default function Navbar() {
                 href={link.href}
                 onClick={() => setIsMobileMenuOpen(false)}
                 className={`font-medium py-2 ${pathname === link.href
-                    ? 'text-maroon-600 border-l-4 border-maroon-600 pl-4'
-                    : 'text-gray-700 hover:text-maroon-600 pl-4'
+                  ? 'text-maroon-600 border-l-4 border-maroon-600 pl-4'
+                  : 'text-gray-700 hover:text-maroon-600 pl-4'
                   }`}
               >
                 {link.label}
