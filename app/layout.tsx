@@ -4,6 +4,7 @@ import "./globals.css";
 import { Toaster } from "react-hot-toast";
 import Navbar from "@/components/Navbar";
 import CartIcon from "@/components/CartIcon";
+import InstagramButton from "@/components/InstagramButton";
 import { CartProvider } from "@/context/CartContext";
 
 const inter = Inter({ 
@@ -37,6 +38,7 @@ export default function RootLayout({
             {children}
           </main>
           <CartIcon />
+          <InstagramButton />
         </CartProvider>
         <Toaster 
           position="top-right"
